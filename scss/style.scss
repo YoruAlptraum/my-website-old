@@ -1,0 +1,81 @@
+@import "custom";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+}
+
+#hero-temp {
+  display: flex;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #banner-text {
+    margin-top: clamp(10vh,25vh,50vh);
+  }
+}
+
+.bg-overlay {
+  background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.1)), 
+  url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 450px;
+  padding-top: 50px;
+}
+
+.nav-item {
+  $margin: 1rem;
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+#main-container {
+  section{
+    padding: 4rem;
+    &:nth-child(2){
+      background-color: $light;      
+    }
+  }
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1.5rem;
+}
+
+footer {
+  min-height: 30vh;
+  
+  #contact > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  align-items: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
