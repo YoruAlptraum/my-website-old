@@ -40,7 +40,7 @@ document.querySelector("my-footer").innerHTML = `
           <label for="email">Your email:</label>
           <input id="email" type="email" name="email" >
           <label for="message">Message:</label>
-          <textarea id="message" ></textarea>
+          <textarea id="message" name="message"></textarea>
           <button type="submit" class="mt-2 btn btn-primary">Submit</button>
         </form>
 
