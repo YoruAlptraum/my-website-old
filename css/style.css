@@ -10732,6 +10732,10 @@ body {
   display: flex;
   height: 100vh;
 }
+#hero-temp a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
 #hero-temp .container {
   display: flex;
   flex-direction: column;
@@ -10768,6 +10772,20 @@ body {
   gap: 1.5rem;
 }
 
+#projects-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+#projects-div a {
+  color: #212529;
+  text-decoration: none;
+}
+#projects-div a div {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 footer {
   min-height: 30vh;
 }
@@ -10788,9 +10806,8 @@ footer #contact > div {
   font-size: larger;
   align-items: center;
 }
-#contacts a {
-  color: white;
-  text-decoration: none;
+#contacts hr {
+  color: #f8f9fa;
 }
 
 /*# sourceMappingURL=style.css.map */

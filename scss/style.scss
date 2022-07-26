@@ -11,6 +11,11 @@ body {
   display: flex;
   height: 100vh;
 
+  a {
+    color: $light;
+    text-decoration: none;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -53,6 +58,21 @@ body {
   gap: 1.5rem;
 }
 
+#projects-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+
+  a {
+    color: $dark;
+    text-decoration: none;
+    div {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+  }
+}
+
 footer {
   min-height: 30vh;
   
@@ -74,8 +94,7 @@ footer {
   font-size: larger;
   align-items: center;
 
-  a {
-    color: white;
-    text-decoration: none;
+  hr {
+    color: $light;
   }
 }
