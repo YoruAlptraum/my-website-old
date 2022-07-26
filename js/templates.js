@@ -33,7 +33,7 @@ document.querySelector("my-footer").innerHTML = `
         <form id="contact-form" action="https://formsubmit.co/ozawathiago@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New submission from portfolio website!">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://ozawathiagoportfolio.netlify.app//thanks.html">
+          <input type="hidden" name="_next" value="https://otportfolio.netlify.app/thanks.html">
 
           <label for="name">Your Name:</label>
           <input id="name" type="text" name="name">
