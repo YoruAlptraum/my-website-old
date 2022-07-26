@@ -2,12 +2,14 @@ let skills = {
   "Windows" : 90,
   "MS Office" : 85,
   "Git" : 50,
+  "VS Code" : 90,
   "C#" : 60,
   "JS" : 40,
   "HTML" : 85,
   "CSS" : 70,
   "SASS" : 30,
   "MySQL" : 70,
+  "Unity" : 40,
 }
 
 let mySkillsDom = document.querySelector("#my-skills");
