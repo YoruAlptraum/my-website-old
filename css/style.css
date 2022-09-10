@@ -10766,10 +10766,10 @@ body {
   background-color: #f8f9fa;
 }
 
-.skill {
+#my-skills .skill {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 
 #projects-div {

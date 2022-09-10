@@ -1,30 +1,17 @@
 let skills = {
-  "Windows" : 90,
-  "MS Office" : 85,
-  "Git" : 50,
-  "VS Code" : 90,
-  "C#" : 60,
-  "JS" : 40,
-  "HTML" : 85,
-  "CSS" : 70,
-  "SASS" : 30,
-  "MySQL" : 70,
-  "Unity" : 40,
+  "Programming" : "C# - C - JavaScript - Python",
+  "Web": "Html - CSS - Bootstrap - Sass",
+  "Databases" : "MySQL - SQL Server",
+  "Tecnologies" : "VS Code - MS Office - Git/GitHub - Unity"
 }
 
 let mySkillsDom = document.querySelector("#my-skills");
 
-Object.keys(skills).forEach(element => {
+Object.keys(skills).forEach(key => {
   mySkillsDom.innerHTML+=`
-<div class="skill align-items-center">
-  <span class="text-center">
-    <h5>${element}:</h5>
-  </span>
-  <span class="col">
-    <div class="progress">
-      <div class="progress-bar bg-info" style="width: ${skills[element]}%" >
-    </div>
-  </span>
-</div>
+  <div class="skill">
+    <b>${key}:</b>
+    <p>${skills[key]}</p>
+  </div>
 `
 });

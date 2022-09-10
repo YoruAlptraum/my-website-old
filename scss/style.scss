@@ -52,10 +52,13 @@ body {
   }
 }
 
-.skill {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  gap: 1.5rem;
+#my-skills{
+  .skill{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    text-align: center;
+  }
 }
 
 #projects-div {
