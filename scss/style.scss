@@ -2,9 +2,37 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@media only screen and (min-width: 1024px) {
+  .skill{    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
 body {
   font-family: "Montserrat";
   font-size: 1.3rem;
+  background-color: $white;
+}
+
+h2 {
+  font-weight: 1000;
+}
+
+.hidden {
+  display: none;
 }
 
 #hero-temp {
@@ -12,7 +40,7 @@ body {
   height: 100vh;
 
   a {
-    color: $light;
+    color: $white;
     text-decoration: none;
   }
 
@@ -32,7 +60,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  color: #fff;
+  color: $white;
   height: 450px;
   padding-top: 50px;
 }
@@ -41,6 +69,19 @@ body {
   $margin: 1rem;
   margin-left: $margin;
   margin-right: $margin;
+}
+
+#translate{
+  background-color: transparent;
+  border: none;
+
+  & > b {
+    padding: 2.5px
+  }
+}
+
+.cur-lang {
+  border: solid 2px $white;
 }
 
 #main-container {
@@ -54,12 +95,10 @@ body {
 
 #my-skills{
   .skill{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
     text-align: center;
   }
 }
+
 
 #projects-div {
   display: grid;
@@ -78,11 +117,8 @@ body {
 
 footer {
   min-height: 30vh;
-  
-  #contact > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  #contacts{
+    margin:auto;
   }
 }
 

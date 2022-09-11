@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,47 +12,103 @@
 
   <div id="hero-temp" class="bg-overlay">
     <div class="container">
-      <h2 class="mt-5">| Portfolio</h2>
+      <h2 class="mt-5" lang="en">| Portfolio</h2>
+      <h2 class="mt-5 hidden" lang="pt">| Portfólio</h2>
       <div id="banner-text">
         <h1>Thiago Ozawa</h1>
-        <h2>Developer</h2>
+        <h2 lang="en">Software Developer</h2>
+        <h2 class="hidden" lang="pt">Desenvolvedor de Software</h2>
       </div>
     </div>
   </div>
   
-  <my-nav></my-nav>
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top">
+    <div class="container container-fluid">
+      <a class="navbar-brand" lang="en">| Portfolio</a>
+      <a class="navbar-brand hidden"lang="pt">| Portfólio</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#about-section" lang="en">About me</a>
+            <a class="nav-link hidden" href="#about-section" lang="pt">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills-section" lang="en">Skills</a>
+            <a class="nav-link hidden" href="#skills-section" lang="pt">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects-section"lang="en">Projects</a>
+            <a class="nav-link hidden" href="#projects-section hidden"lang="pt">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts-section"lang="en">Contact me</a>
+            <a class="nav-link hidden" href="#contacts-section"lang="pt">Entre em contato</a>
+          </li>
+        </ul>
+      </div>    
+            
+      <button id="translate" class="text-white" onclick="switch_lang()">
+        <b class="cur-lang">EN</b> <b>PT</b>
+      </button>
+
+    </div>
+  </nav>
 
   <div id="main-container">
     <section id="about-section">
       <div class="container text-center">
-        <h2 >About Me:</h2>
-        <p>I am a Software Engineering student from Brazil</p>
-        <p>My main interests includes data science, neural networks and human biology.</p>
-        <p>I'm currently looking for an opportunity to enter the tech and dev industry.</p>
+        <h2 lang="en">About Me:</h2>
+        <h2 class="hidden" lang="pt">Sobre:</h2>
+        <p lang="en">I am a Software Engineering student. <br>
+        My main interests includes neural networks and human biology.<br>
+        I'm currently looking for an opportunity to enter the tech and dev industry.</p>
+        <p class="hidden" lang="pt">Sou um estudante de Engenharia de Software na Unicesumar.<br>
+        Meus principais intereses incluem redes neurais e biologia humana.<br>
+        Estou procurando por oportunidades de entrar na area tech e dev.
+        </p>
       </div>
     </section>
 
     <section id="skills-section">
       <div class="container">
-        <h2 class="card-title text-center">My Skills:</h2>
-        <div id="my-skills" class="mt-5"></div>
+        <h2 class="card-title text-center" lang="en">Skills:</h2>
+        <h2 class="card-title text-center hidden" lang="pt">Habilidades:</h2>
+        <div id="my-skills" class="mt-5">  
+          <div class="skill"><b lang="en">Programming:</b><b class="hidden" lang="pt">Programação:</b><p>C# - C - JavaScript - Python</p></div>
+          <div class="skill"><b lang="en">Web:</b><b class="hidden" lang="pt">Web:</b><p>Html - CSS - Bootstrap - Sass</p>
+          </div><div class="skill"><b lang="en">Databases:</b><b class="hidden" lang="pt">Banco de dados:</b><p>MySQL - SQL Server</p></div>
+          <div class="skill"><b lang="en">Technologies:</b><b class="hidden" lang="pt">Tecnologias:</b><p>VS Code - MS Office - Git/GitHub - Unity</p></div>
+
+        </div>
 
       </div>
     </section>
 
     <section id="projects-section">
       <div class="container">
-        <h2 class="card-title text-center">My Main Projects:</h2>
+        <h2 class="card-title text-center " lang="en">Main Projects:</h2>
+        <h2 class="card-title text-center hidden" lang="en">Principais Projetos:</h2>
         <div class="mt-4">
           <h3 class="text-center">PIT SENAI</h3>
-          <div>
-            <ul>
+          <div class="text-center">
+            <ul lang="en">
               <li>Application for Inventory, customers and employees management,  with different levels of access.</li>
               <li>Simple login and hash password system.</li>
               <li>Registration of purchase orders and stock movement.</li>
               <li>Registration of products, customers, employees, suppliers and payment methods.</li>
               <li>Website with application documentation</li>
-              <li>Technologies: C# Windows Forms , mySQL, html, css, github</li>
+              <li><b>Technologies used:</b> C# Windows Forms , mySQL, html, css, github</li>
+            </ul>
+            <ul class="hidden" lang="pt">
+              <li>Aplicativo de gerência de estoque, clientes e funcionários com diferentes níveis de acesso.</li>
+              <li>Sistema simples de login e senha hash.</li>
+              <li>Registro de ordens de compra e movimento de estoque.</li>
+              <li>Cadastro de produtos, clientes, funcionários, fornecedores e formas de pagamento.</li>
+              <li>Site com documentação do aplicativo</li>
+              <li><b>Tecnologias usadas:</b> C# Windows Forms , mySQL, html, css, github</li>
             </ul>
           </div>
         </div>
@@ -62,10 +117,42 @@
 
   </div>
 
-  <my-footer></my-footer>
+  <footer id="contacts-section" class="text-white bg-dark py-5">
+    <div class="container">
+      <h2 class="text-center" lang="en">Contact me:</h2>
+      <h2 class="text-center hidden " lang="pt">Entre em contato:</h2>
+      <div id="contact">
+        <form id="contact-form" action="https://formsubmit.co/ozawathiago@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New submission from portfolio website!">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://otportfolio.netlify.app/thanks.html">
 
-  <script type="text/javascript" src="/js/skills.js"></script>
-  <script type="text/javascript" src="/js/templates.js"></script>
+          <label for="name" lang="en">Your Name:</label>
+          <label class="hidden" for="name" lang="pt">Seu Nome:</label>
+          <input id="name" type="text" name="name">
+          <label for="email" lang="en">Your email:</label>
+          <label class="hidden" for="email" lang="pt">Seu email:</label>
+          <input id="email" type="email" name="email" >
+          <label for="message" lang="en">Message:</label>
+          <label class="hidden" for="message" lang="pt">Mensagem:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit" class="mt-2 btn btn-primary" lang="en">Submit</button>
+          <button type="submit" class="mt-2 btn btn-primary hidden" lang="pt">Enviar</button>
+        </form>
+
+        <div id="contacts">
+        <p><i class="far fa-envelope"></i>  ozawathiago@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> +55 43 98823-1281</p>
+        <p><i class="lni lni-map-marker"></i> Londrina, Paraná</p>
+        <hr style="width:50%;">
+        <a class="text-white" href="https://github.com/YoruAlptraum">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="/js/change-lang.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/f55b7695fe.js" crossorigin="anonymous"></script>
 </body>
