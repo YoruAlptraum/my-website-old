@@ -1,14 +1,18 @@
-pt = document.querySelectorAll('[lang=pt]')
-en = document.querySelectorAll('[lang=en]')
-tr = document.querySelector("#translate").children
+const pt = document.querySelectorAll('[lang=pt]')
+const en = document.querySelectorAll('[lang=en]')
+const tr = document.querySelector("#translate") !== null
+// console.debug(tr)
 
-var language = window.navigator.userLanguage || window.navigator.language;
+const language = window.navigator.userLanguage || window.navigator.language;
 console.debug(language)
 if(language.includes("pt")) switch_lang();
 
 function switch_lang(){
-  for(var i = 0; i < tr.length; i++){
-    tr[i].classList.toggle('cur-lang')
+  if(tr !== false){
+    c = document.querySelector("#translate").children
+    for(let i = 0; i < c.length; i++){
+      c[i].classList.toggle('cur-lang')
+    }
   }
 
   pt.forEach(p => {
